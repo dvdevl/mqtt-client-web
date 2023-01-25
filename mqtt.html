@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MQTT</title>
+		<link rel="stylesheet" href="mqtt.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+		<!-- <script src="paho-mqtt-min.js"></script> -->
+	</head>
+	<body>
+		<div id="container">
+			<form action="">
+				<h3>Servidor MQTT</h3>
+				<label for="clientID">Cliente ID</label>
+				<input type="text" name="clientID" id="clientID">
+				<br><br>
+				<label for="servidor">Servidor</label>
+				<input type="text" name="host" id="host">
+				<label for="porta">Porta</label>
+				<input type="text" name="port" id="port">
+				<br><br>
+				<label for="usuario">Usuario</label>
+				<input type="text" name="user" id="user">
+				<label for="senha">Senha</label>
+				<!-- <input type="password" name="password" id="password"> -->
+				<input type="text" name="password" id="password">
+				<br><br>
+				<input type="button" value="Conectar" onclick="mqttConnect()">
+				<input type="button" value="Desconectar" onclick="mqttDisconnect()">
+			</form>
+		
+			<form action="" id="sendForm">
+				<hr>
+				<h3>Enviar mensagem</h3>
+				<label for="topico">Topico</label>
+				<input type="text" name="topic" id="topic">
+				<label for="mensagem">Mensagem</label>
+				<input type="text" name="msg" id="msg">
+				<input type="button" value="Enviar" onclick="sendMessage()">
+				<br><br>
+				<input type="radio" name="qos" id="qos0" value="0"><label for="qos0">Qos0</label>
+				<input type="radio" name="qos" id="qos1" value="1"><label for="qos1">Qos1</label>
+				<input type="radio" name="qos" id="qos2" value="2"><label for="qos2">Qos2</label>
+				<input type="checkbox" name="retained" id="retained"><label for="retained">Retained</label>
+				<hr>
+			</form>
+			
+			<h3>Mensagens Enviadas/Recebidas</h3>
+			<div id="msgArea">
+				Topico / Mensagem
+				<hr>
+			</div>
+			<br>
+			<div id="switch"></div>
+			<script src="mqtt.js"></script>
+		</div>
+	</body>
+</html>

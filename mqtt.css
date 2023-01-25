@@ -1,0 +1,41 @@
+html {
+	/*width: 620px;
+	margin: auto;*/
+}
+
+h3 {
+	color: whitesmoke;
+}
+
+label {
+	color: whitesmoke;
+}
+
+body {
+	/*margin: auto;*/
+	text-align: center;
+	background-color: rgb(36, 36, 36);
+}
+
+/*input[type="button"] {
+    color: black;
+}*/
+
+div#container {
+	display: block;
+	margin: 0 auto;
+	width: 600px;
+	border: blanchedalmond solid 5px;
+}
+
+div#msgArea {
+	color: whitesmoke;
+	width: auto;
+	border: 1px solid white;
+}
+
+div#switch {
+	width: 30px;
+	height: 30px;
+	border: blanchedalmond solid 3px;
+}
