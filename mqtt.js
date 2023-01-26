@@ -24,7 +24,7 @@ function mqttConnect() {
     const port = document.getElementById("port").value;
     const user = document.getElementById("user").value;
     const password = document.getElementById("password").value;
-		const clientId = document.getElementById("clientID").value;
+    const clientId = document.getElementById("clientID").value;
     
     //console.log(host, port, user, password);
 //}
