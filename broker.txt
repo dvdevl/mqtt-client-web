@@ -1,4 +1,0 @@
-host = "m12.cloudmqtt.com";
-port = 31803;
-user = "hatqemft";
-password = "AjEIW5kTfjBO";
